@@ -14,6 +14,22 @@ class Drink
 end
 
 class VendingMachine
+  def initialize(drinks)
+    @drinks = drinks
+  end
+
+  def drinks
+    @drinks
+  end
+
+  def show_drinks
+    puts "いらっしゃいませ。以下の商品を販売しています"
+    i = 0
+    self.drinks.each do |drink|
+      puts "【#{i}】#{drink.name}: #{drink.fee}円"
+      i += 1
+    end
+  end
 end
 
 class User
@@ -29,4 +45,5 @@ drinks = []
   drinks << Drink.new(drink_name,drink_fee)
 end
 
-puts drinks
+vending_machine = VendingMachine.new(drinks)
+vending_machine.show_drinks
