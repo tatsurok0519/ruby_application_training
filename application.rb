@@ -1,6 +1,7 @@
 require "./drink"
 require "./vending_machine"
 require "./user"
+require "./slot_game"
 
 puts "商品を用意してください。"
 drinks = []
